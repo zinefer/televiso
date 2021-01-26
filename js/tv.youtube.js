@@ -8,7 +8,7 @@ var youtube = {
         //unstarted (-1), ended (0), playing (1), 
         //paused (2), buffering (3), video cued (5)
         if(youtube.obj.getPlayerState() !== 1){
-            youtube.obj.playVideo();
+           youtube.obj.playVideo();
         }else{
             youtube.obj.pauseVideo();
         }
@@ -75,8 +75,12 @@ var youtube = {
         }
         
         if(ID){
-            data.embed = "&lt;object width=\"600\" height=\"338\"&gt;&lt;param name=\"movie\" value=\"http://www.youtube.com/v/"
-            +ID+"?version=3&amp;feature=oembed"+time+"\"&gt;&lt;/param&gt;&lt;param name=\"allowFullScreen\" value=\"true\"&gt;&lt;/param&gt;&lt;param name=\"allowscriptaccess\" value=\"always\"&gt;&lt;/param&gt;&lt;embed src=\"http://www.youtube.com/v/"+ID+"?version=3&amp;feature=oembed"+time+"\" type=\"application/x-shockwave-flash\" width=\"600\" height=\"338\" allowscriptaccess=\"always\" allowfullscreen=\"true\"&gt;&lt;/embed&gt;&lt;/object&gt;";
+			
+		
+			
+			
+			
+            data.embed = "	&lt;iframe width=&quot;600&quot; height=&quot;338&quot; src=&quot;http://www.youtube.com/embed/"+ID+"&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;";
             data.thumbnail = "http://i2.ytimg.com/vi/"+ID+"/hqdefault.jpg";
             return data;
         }else{
