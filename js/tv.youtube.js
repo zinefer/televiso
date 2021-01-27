@@ -80,8 +80,8 @@ var youtube = {
 			
 			
 			
-            data.embed = "	&lt;iframe width=&quot;600&quot; height=&quot;338&quot; src=&quot;http://www.youtube.com/embed/"+ID+"&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;";
-            data.thumbnail = "http://i2.ytimg.com/vi/"+ID+"/hqdefault.jpg";
+            data.embed = "	&lt;iframe width=&quot;600&quot; height=&quot;338&quot; src=&quot;//www.youtube.com/embed/"+ID+"&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;";
+            data.thumbnail = "//i2.ytimg.com/vi/"+ID+"/hqdefault.jpg";
             return data;
         }else{
             return false;

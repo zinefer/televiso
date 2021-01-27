@@ -37,7 +37,7 @@ var vimeo = {
             ID = ID[1];
         }        
         if(ID){
-            created.embed = "&lt;iframe src=\"http://player.vimeo.com/video/"+ID+"\" width=\"600\" height=\"338\" frameborder=\"0\" webkitallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;";
+            created.embed = "&lt;iframe src=\"//player.vimeo.com/video/"+ID+"\" width=\"600\" height=\"338\" frameborder=\"0\" webkitallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;";
             created.thumbnail = null;
             return created;
         }else{
@@ -84,7 +84,7 @@ var vimeo = {
 
     sendMsg: function(msg){
         var target = vimeo.obj.contentWindow;
-        target.postMessage(msg, 'http://player.vimeo.com/');
+        target.postMessage(msg, '//player.vimeo.com/');
     },
 
     receiveMessage: function(msg){

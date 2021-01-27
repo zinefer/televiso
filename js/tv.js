@@ -358,7 +358,7 @@ function loadChannel(channel, video_id) {
     if(Globals.videos[this_chan] === undefined){
         var feed = getFeedURI(channel);
         Globals.cur_chan_req = $.ajax({
-            url: "http://www.reddit.com"+feed,
+            url: "//www.reddit.com"+feed,
             dataType: "jsonp",
             jsonp: "jsonp",
             success: function(data) {
@@ -473,7 +473,7 @@ function loadPromoVideoList () {
         var thumbNail;
         if (Globals.promo.type === 'youtube') {
 
-            thumbNail = 'http://i2.ytimg.com/vi/' + this_video.id + '/hqdefault.jpg';
+            thumbNail = '//i2.ytimg.com/vi/' + this_video.id + '/hqdefault.jpg';
         }
 
         $thumbnail
@@ -612,7 +612,7 @@ function loadVideo(video) {
         embed = prepEmbed(embed, Globals.videos[this_chan].video[selected_video].domain);
         embed = prepEmbed(embed, 'size');
 
-        var redditlink = 'http://reddit.com'+$.unescapifyHTML(Globals.videos[this_chan].video[selected_video].permalink);
+        var redditlink = '//reddit.com'+$.unescapifyHTML(Globals.videos[this_chan].video[selected_video].permalink);
         $('#video-title').html('<a href="' + redditlink + '" target="_blank"'
                                + ' title="' + Globals.videos[this_chan].video[selected_video].title_quot + '">'
                                + Globals.videos[this_chan].video[selected_video].title_unesc + '</a>');
@@ -662,7 +662,7 @@ function loadVideoById(video_id) {
         }
 
         Globals.cur_vid_req = $.ajax({
-            url: "http://www.reddit.com/by_id/t3_"+video_id+".json",
+            url: "//www.reddit.com/by_id/t3_"+video_id+".json",
             dataType: "jsonp",
             jsonp: "jsonp",
             success: function(data) {
@@ -709,10 +709,10 @@ function loadPromo(type, id, desc){
 
     switch(type){
     case 'youtube':
-        url = 'http://www.youtube.com/watch?v=' + id;
+        url = '//www.youtube.com/watch?v=' + id;
         break;
     case 'vimeo':
-        url = 'http://vimeo.com/' + id;
+        url = '//vimeo.com/' + id;
         break;
     default:
         consoleLog('unsupported promo type');
@@ -1144,7 +1144,7 @@ function checkAnchor(){
 
 /* Reddit Functions */
 function redditButton(id){
-    var reddit_string="<iframe src=\"http://www.reddit.com/static/button/button1.html?width=120";
+    var reddit_string="<iframe src=\"//www.reddit.com/static/button/button1.html?width=120";
     reddit_string += '&id=' + id;
     //reddit_string += '&css=' + encodeURIComponent(window.reddit_css);
     //reddit_string += '&bgcolor=' + encodeURIComponent(window.reddit_bgcolor);
